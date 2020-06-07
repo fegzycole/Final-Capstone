@@ -3,6 +3,7 @@ class Booking < ApplicationRecord
   belongs_to :automobile
 
   validates :date, presence: true
+  validates :city, presence: true
   validates :notes, length: { maximum: 255 }
 
   def self.my_bookings(id)
