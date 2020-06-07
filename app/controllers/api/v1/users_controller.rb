@@ -22,7 +22,7 @@ module Api
 
           json_response(data, :ok)
         else
-          json_response({ error: 'unauthorized' }, :unauthorized)
+          json_response({ error: 'Email or password incorrect' }, :unauthorized)
         end
       end
 
