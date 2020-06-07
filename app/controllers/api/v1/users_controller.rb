@@ -3,29 +3,17 @@ module Api
     class UsersController < ApplicationController
       def create
         @user = User.new(user_params)
+
         if @user.save
-          token = JsonWebToken.encode(user_id: @user.id, isAdmin: @user.isAdmin)
-          time = Time.now + 24.hours.to_i
-          render json: { token: token, exp: time.strftime('%m-%d-%Y %H:%M'),
-                         id: @user.id, firstName: @user.firstName,
-                         lastName: @user.lastName, email: @user.email }, status: :ok
-        else
-          render json: { errors: @user.errors.full_messages },
-                 status: :unprocessable_entity
-        end
-      end
+          session[:user_id] = @user.id
 
-      def login
-        @user = User.find_by_email(params[:email])
+          data = { id: session[:user_id], firstName: @user.first_name,
+                   lastName: @user.last_name, email: @user.email }
 
-        if @user&.authenticate(params[:password])
-          token = JsonWebToken.encode(user_id: @user.id, isAdmin: @user.isAdmin)
-          time = Time.now + 24.hours.to_i
-          render json: { token: token, exp: time.strftime('%m-%d-%Y %H:%M'),
-                         id: @user.id, firstName: @user.firstName,
-                         lastName: @user.lastName, email: @user.email }, status: :ok
+          json_response(data, :ok)
         else
-          render json: { error: 'unauthorized' }, status: :unauthorized
+          json_response({ errors: @user.errors.full_messages },
+                        :unprocessable_entity)
         end
       end
 
