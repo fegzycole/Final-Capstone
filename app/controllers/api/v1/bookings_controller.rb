@@ -17,6 +17,13 @@ module Api
         end
       end
 
+      def index
+        @bookings = Booking.my_bookings(@current_user.id)
+
+        data = { bookings: @bookings }
+
+        json_response(data, :ok)
+      end
 
       private
 
