@@ -7,14 +7,18 @@ module Api
         @booking = Booking.new(booking_params)
         @booking.user_id = @current_user.id
 
-        if @booking.save
+        if Booking.exists(params[:booking][:automobile_id],
+                          params[:booking][:date], params[:booking][:city]).length.positive?
+          json_response({ error: 'You can not book this automobile at the specified date and city' },
+                        :unprocessable_entity)
+        elsif @booking.save
           data = { message: 'Booking successful' }
 
           json_response(data, :ok)
         else
           json_response({ errors: @booking.errors.full_messages },
                         :unprocessable_entity)
-        end
+          end
       end
 
       def index
