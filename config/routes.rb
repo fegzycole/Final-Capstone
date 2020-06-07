@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     namespace 'v1' do
       post '/auth/signup', to: 'users#create'
       post '/auth/signin', to: 'users#login'
+      get '/automobiles', to: 'automobiles#index'
     end
   end
 end
