@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 ENV['RAILS_ENV'] ||= 'test'
 
 require File.expand_path('../config/environment', __dir__)
@@ -43,8 +41,8 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
-  Shoulda::Matchers.configure do |config|
-    config.integrate do |with|
+  Shoulda::Matchers.configure do |config_|
+    config_.integrate do |with|
       with.test_framework :rspec
       with.library :rails
     end

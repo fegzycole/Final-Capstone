@@ -8,7 +8,7 @@ RSpec.describe Booking, type: :model do
     it { should allow_value('Arriving with two others').for(:notes) }
     it { should_not allow_value(notes).for(:notes) }
 
-    it { should belong_to(:user)}
-    it { should belong_to(:automobile)}
+    it { should belong_to(:user) }
+    it { should belong_to(:automobile) }
   end
 end

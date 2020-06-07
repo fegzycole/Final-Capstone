@@ -11,6 +11,6 @@ module Response
 
     time = Time.now + 24.hours.to_i
 
-    { token: token, exp: time.strftime('%m-%d-%Y %H:%M')}
+    { token: token, exp: time.strftime('%m-%d-%Y %H:%M') }
   end
 end

@@ -13,6 +13,6 @@ RSpec.describe User, type: :model do
     it { should_not allow_value('fe').for(:last_name) }
     it { should_not allow_value(email).for(:email) }
 
-    it { should have_many(:bookings)}
+    it { should have_many(:bookings) }
   end
 end

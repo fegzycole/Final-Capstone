@@ -18,7 +18,7 @@ module Api
         else
           json_response({ errors: @booking.errors.full_messages },
                         :unprocessable_entity)
-          end
+        end
       end
 
       def index

@@ -10,6 +10,6 @@ RSpec.describe Automobile, type: :model do
     it { should allow_value('Vespa').for(:description) }
     it { should_not allow_value('V').for(:description) }
 
-    it { should have_many(:bookings)}
+    it { should have_many(:bookings) }
   end
 end
