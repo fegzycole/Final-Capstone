@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       post '/auth/signup', to: 'users#create'
       post '/auth/signin', to: 'users#login'
       get '/automobiles', to: 'automobiles#index'
+      post '/bookings', to: 'bookings#create'
     end
   end
 end
