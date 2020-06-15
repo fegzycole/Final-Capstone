@@ -91,7 +91,7 @@ This project was built with Ruby on rails version 6
 <!-- FUTURE IMPROVEMENTS -->
 ## Future Improvements
 
-See the [open issues](https://github.com/fegzycole/Rails-capstone/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/fegzycole/Final-Capstone/issues) for a list of proposed features (and known issues).
 
 
 <!-- LICENSE -->
@@ -103,11 +103,11 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 Ferguson Iyara - [Github profile](https://github.com/fegzycole)
 
-Project Link: [Project repo](https://github.com/fegzycole/Rails-capstone)
+Project Link: [Project repo](https://github.com/fegzycole/Final-Capstone)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/badge/Contributors-1-%2300ff00
-[contributors-url]: https://github.com/fegzycole/Rails-capstone/graphs/contributors
+[contributors-url]: https://github.com/fegzycole/Final-Capstone/graphs/contributors
 [issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
-[issues-url]: https://github.com/fegzycole/Rails-capstone/issues/
+[issues-url]: https://github.com/fegzycole/Final-Capstone/issues/
