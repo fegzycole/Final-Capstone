@@ -10,7 +10,10 @@ RSpec.describe 'Bookingss API', type: :request do
   let(:user_params) do
     {
       user: {
-        first_name: 'Ferguson', password: 'Fegzycole', email: 'fegzydomain@mail.com', last_name: 'Iyara'
+        first_name: 'Ferguson',
+        password: 'Fegzycole',
+        email: 'fegzydomain@mail.com',
+        last_name: 'Iyara'
       }
     }
   end
