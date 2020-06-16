@@ -74,18 +74,6 @@ This project was built with Ruby on rails version 6
 
 ## Testing
 
-- git clone https://github.com/fegzycole/Final-Capstone.git
-
-- cd Final-Capstone
-
-- bundle update
-
-- bundle install
-
-- rails db:create
-
-- rails db:migrate (to add tables and columns)
-
 - Run **rspec** in your terminal to run all test suites
 
 <!-- FUTURE IMPROVEMENTS -->
