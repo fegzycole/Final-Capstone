@@ -7,7 +7,7 @@ module Api
         if @user.save
           data = get_data(@user)
 
-          json_response(data, :ok)
+          json_response(data, :created)
         else
           json_response({ errors: @user.errors.full_messages },
                         :unprocessable_entity)

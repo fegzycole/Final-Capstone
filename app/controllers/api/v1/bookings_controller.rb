@@ -14,7 +14,7 @@ module Api
         elsif @booking.save
           data = { message: 'Booking successful' }
 
-          json_response(data, :ok)
+          json_response(data, :created)
         else
           json_response({ errors: @booking.errors.full_messages },
                         :unprocessable_entity)
@@ -32,7 +32,7 @@ module Api
       private
 
       def booking_params
-        params[:booking].permit(:date, :notes, :city, :automobile_id)
+        params.require(:booking).permit(:date, :notes, :city, :automobile_id)
       end
     end
   end
